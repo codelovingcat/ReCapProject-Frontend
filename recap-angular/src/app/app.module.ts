@@ -9,6 +9,7 @@ import { BrandComponent } from './components/brand/brand.component';
 import { ColorComponent } from './components/color/color.component';
 import { CustomerComponent } from './components/customer/customer.component';
 import { NaviComponent } from './components/navi/navi.component';
+import { TodoComponent } from './components/todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NaviComponent } from './components/navi/navi.component';
     BrandComponent,
     ColorComponent,
     CustomerComponent,
-    NaviComponent
+    NaviComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,

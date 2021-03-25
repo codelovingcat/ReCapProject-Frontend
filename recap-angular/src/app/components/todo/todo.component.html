@@ -1,0 +1,26 @@
+<div *ngIf="dataLoaded==false" class="spinner-border text-success" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  
+  <table *ngIf="dataLoaded!=false" class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">User Id</th>
+          <th scope="col">Id</th>
+          <th scope="col">Title</th>
+          <th scope="col">Completed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let todo of todos">
+          <th scope="row">1</th>
+          <td>{{todo.userId}}</td>
+          <td>{{todo.id}}</td>
+          <td>{{todo.title}}</td>
+          <td>{{todo.completed}}</td>
+        </tr>
+       
+      </tbody>
+    </table>
+  

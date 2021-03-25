@@ -1,4 +1,10 @@
-<table class="table">
+<div class="d-flex justify-content-center">
+  <div *ngIf="dataLoaded==false" class="spinner-border text-success" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+
+<table *ngIf="dataLoaded!=false" class="table">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -8,20 +14,17 @@
         <th scope="col">Model Yılı</th>
         <th scope="col">Fiyat</th>
         <th scope="col">Açıklama</th>
-        <th scope="col">Resim</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let car of cars">
         <th scope="row">1</th>
-        <td>{{car.carId}}</td>
-        <td>{{car.brandName}}</td>
-        <td>{{car.colorName}}</td>
+        <td>{{car.id}}</td>
+        <td>{{car.brandId}}</td>
+        <td>{{car.colorId}}</td>
         <td>{{car.modelYear}}</td>
         <td>{{car.dailyPrice}}</td>
         <td>{{car.description}}</td>
-        <td>{{car.imagePath}}</td>
       </tr>
-     
     </tbody>
   </table>
